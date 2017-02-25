@@ -60,12 +60,13 @@ public class GTA {
 	private Stream<Path> modules;
 	private String[] moduleNames;
 	private LinkedList<String> mainClasses;
-	private Path javac, javap;
 
 	private boolean showConfig = false;
+	private Path jdk9, javac;
 
 	private GTA(Path root) {
 		this.root = root;
+		jdk9 = new File(ProcessHandle.current().info().command().get()).toPath().getParent();
 	}
 
 	public void clean() throws IOException {
@@ -108,8 +109,7 @@ public class GTA {
 	}
 
 	private void checkMainClass(Path file) {
-		javap = Paths.get("D:", "java/JDK9/bin/javap.exe");
-		String[] cmdline = { javap.toString(), file.toString() };
+		String[] cmdline = { jdk9.resolve("javap.exe").toString(), file.toString() };
 		try {
 			Process process = Runtime.getRuntime().exec(cmdline);
 			for (Scanner scanner = new Scanner(process.getInputStream()); scanner.hasNext();) {
@@ -139,7 +139,7 @@ public class GTA {
 	}
 
 	public void compileAll() throws Exception {
-		javac = Paths.get("D:", "java/JDK9/bin/javac.exe");
+		javac = jdk9.resolve("javac.exe");
 		if (modules == null) listModules();
 		Path output = root.resolve("mods");
 		LinkedBlockingQueue<Module> tasks = new LinkedBlockingQueue<>();
