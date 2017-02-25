@@ -1,6 +1,12 @@
 # GTA
 simple build too for java 9 module, where GTA stands for Greater than 8(A) and means it must run at jav 9 and above
 
+# Requirement
+1. JDK9
+2. change the path of java.exe in gta.bat to your JDK9 path. NOTE: there is no need for java_home env variable, because the bat/sh
+
+..* for *nix user create a gta.sh is apoc:)
+
 # Directory struct
 ```
 project
