@@ -34,7 +34,7 @@ project
 
 # Usage
 gta [target [target]]
-default target is build
+
 ## list
   list all modules
 ## compile 
