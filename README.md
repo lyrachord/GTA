@@ -1,5 +1,5 @@
 # GTA
-simple build too for java 9 module, where GTA stands for Greater than 8(A) and means must run at jav 9 and above
+simple build too for java 9 module, where GTA stands for Greater than 8(A) and means it must run at jav 9 and above
 
 # Directory struct
 ```
