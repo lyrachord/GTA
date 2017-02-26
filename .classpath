@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
 	<classpathentry kind="lib" path="D:/java/lib/java9/classes" sourcepath="D:/repos/hg/openjdk/jdk9/jdk/src/java.base/share/classes"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="D:/java/lib/slf4j-1.7.12/slf4j-api-1.7.12.jar"/>
+	<classpathentry kind="lib" path="D:/java/eclipse/neon2/eclipse/plugins/org.apache.commons.lang3_3.1.0.v201403281430.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
